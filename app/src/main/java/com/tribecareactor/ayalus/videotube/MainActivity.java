@@ -27,7 +27,8 @@ public class MainActivity extends YouTubeBaseActivity implements YouTubePlayer.O
         setContentView(R.layout.activity_main);
 
         youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
-        youTubeView.initialize("YOUTUBE_API_KEY_ADD_HERE", this);
+     //   youTubeView.initialize("YOUTUBE_API_KEY_ADD_HERE", this);
+        youTubeView.initialize("AIzaSyDqgYqjB_je4N40Eb7Knuu9DkkBmHSeKxM", this);
         playerStateChangeListener = new MyPlayerStateChangeListener();
 //        playbackEventListener = new MyPlaybackEventListener();
     }
@@ -57,7 +58,8 @@ public class MainActivity extends YouTubeBaseActivity implements YouTubePlayer.O
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == RECOVERY_REQUEST) {
             // Retry initialization if user performed a recovery action
-            getYouTubePlayerProvider().initialize("YOUTUBE_API_KEY_ADD_HERE", this);
+        //    getYouTubePlayerProvider().initialize("YOUTUBE_API_KEY_ADD_HERE", this);
+            getYouTubePlayerProvider().initialize("AIzaSyDqgYqjB_je4N40Eb7Knuu9DkkBmHSeKxM", this);
         }
     }
 
